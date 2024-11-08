@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
 
-""" module: alpha """
+""" module: sigma """
 
-def funA():
-    return "Alpha"
+def funS():
+    return "Sigma"
 
 if __name__ == "__main__":
     print("I prefer to be a module.")

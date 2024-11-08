@@ -1,19 +1,12 @@
-#import module
-#print(module.counter)
-
-#from module import suml, prodl
-
-#zeroes = [0 for i in range(5)]
-#ones = [1 for i in range(5)]
-#print(suml(zeroes))
-#print(prodl(ones))
-
 from sys import path
-path.append('..\\modules')
+path.append('..\\packages')
 
-import module
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+from extra.iota import funI
+from extra.good.beta import funB
 
-zeroes = [0 for i in range(5)]
-ones = [1 for i in range(5)]
-print(module.suml(zeroes))
-print(module.prodl(ones))
+print(sig.funS())
+print(alp.funA())
+print(funI())
+print(funB())

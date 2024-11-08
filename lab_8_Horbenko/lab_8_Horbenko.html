@@ -171,24 +171,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="завдання-1" class="level3">
 <h3 class="anchored" data-anchor-id="завдання-1">Завдання 1</h3>
 <p>Створити модуль <code>module.py</code> та файл <code>main.py</code>, структура яких описана у лекції 9, повторишви кроки 1-10.</p>
-<div id="cell-7" class="cell" data-execution_count="6">
+<div id="cell-7" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Тут має бути Ваш код</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл module.py '''</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл module.py '''</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#print("I like to be a module.")</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print(__name__)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#if __name__ == "__main__":</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#    print("I prefer to be a module.")</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#else:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#    print("I like to be a module.")</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#counter = 0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#if __name__ == "__main__":</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#    print("I prefer to be a module.")</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#else:</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#    print("I like to be a module.")</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">""" module.py - an example of a Python module """</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>__counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> suml(the_list):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> __counter</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    __counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    the_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> element <span class="kw">in</span> the_list:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        the_sum <span class="op">+=</span> element</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> the_sum</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prodl(the_list):</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> __counter</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    __counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    prod <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> element <span class="kw">in</span> the_list:</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        prod <span class="op">*=</span> element</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prod</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"I prefer to be a module, but I can do some tests for you."</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    my_list <span class="op">=</span> [i<span class="op">+</span><span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)]</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(suml(my_list) <span class="op">==</span> <span class="dv">15</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(prodl(my_list) <span class="op">==</span> <span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>'Файл module.py '</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>I prefer to be a module, but I can do some tests for you.
+True
+True</code></pre>
 </div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="7">
+<div id="cell-8" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Тут має бути Ваш код</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл main.py '''</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл main.py '''</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#import module</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print(module.counter)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#from module import suml, prodl</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#zeroes = [0 for i in range(5)]</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#ones = [1 for i in range(5)]</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#print(suml(zeroes))</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#print(prodl(ones))</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sys <span class="im">import</span> path</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>path.append(<span class="st">'.</span><span class="ch">\\</span><span class="st">modules'</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> module</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>zeroes <span class="op">=</span> [<span class="dv">0</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ones <span class="op">=</span> [<span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)]</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(module.suml(zeroes))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(module.prodl(ones))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>'Файл main.py '</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1</code></pre>
 </div>
 </div>
 </section>
@@ -200,14 +261,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Створити пакет <code>extra</code>, структура яких описана у лекції 9, повторишви кроки 1-7, завантаживши потрібні файли за наведеними нижче посиланнями:</p>
 <p><a href="python_lab_8_quarto_files\Modules%20and%20Packages%20ZIP%20file.zip">Modules and Packages ZIP file.zip</a></p>
 <p><a href="python_lab_8_quarto_files\Extrapack%20ZIP%20file.zip">Extrapack ZIP file.zip</a></p>
-<div id="cell-11" class="cell" data-execution_count="8">
+<div id="cell-11" class="cell" data-execution_count="45">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Тут має бути Ваш код</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл main2.py '''</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''Файл main2.py '''</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sys <span class="im">import</span> path</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>path.append(<span class="st">'.</span><span class="ch">\\</span><span class="st">packages'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> extra.good.best.sigma <span class="im">as</span> sig</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> extra.good.alpha <span class="im">as</span> alp</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> extra.iota <span class="im">import</span> funI</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> extra.good.beta <span class="im">import</span> funB</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sig.funS())</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(alp.funA())</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funI())</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funB())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>'Файл main2.py '</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sigma
+Alpha
+Iota
+beta</code></pre>
 </div>
 </div>
 </section>
@@ -230,32 +305,191 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>За допомогою менеджера пакетів <code>pip</code>:</p>
 <ul>
 <li>вивести перелік встановлених на Вашому комп’ютері пакетів</li>
-<li>знайти і встановити пакет <code>pygame</code></li>
-<li>вивести інформацію про <code>pygame</code></li>
-<li>запустити код, наведений нижче</li>
-<li>деінсталювати пакет <code>pygame</code></li>
 </ul>
 <div id="cell-15" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygame</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>run <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">400</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>pygame.init()</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>screen <span class="op">=</span> pygame.display.set_mode((width, height))</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>font <span class="op">=</span> pygame.font.SysFont(<span class="va">None</span>, <span class="dv">48</span>)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> font.render(<span class="st">"Welcome to pygame"</span>, <span class="va">True</span>, (<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>))</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>screen.blit(text, ((width <span class="op">-</span> text.get_width()) <span class="op">//</span> <span class="dv">2</span>, (height <span class="op">-</span> text.get_height()) <span class="op">//</span> <span class="dv">2</span>))</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>pygame.display.flip()</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> run:</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> event <span class="kw">in</span> pygame.event.get():</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.QUIT<span class="op">\</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONUP<span class="op">\</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.KEYUP:</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>            run <span class="op">=</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pip <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Package                   Version
+------------------------- -----------
+anyio                     4.2.0
+argon2-cffi               21.3.0
+argon2-cffi-bindings      21.2.0
+asttokens                 2.0.5
+async-lru                 2.0.4
+attrs                     23.1.0
+Babel                     2.11.0
+beautifulsoup4            4.12.3
+bleach                    4.1.0
+Brotli                    1.0.9
+certifi                   2024.8.30
+cffi                      1.16.0
+charset-normalizer        3.3.2
+colorama                  0.4.6
+comm                      0.2.1
+debugpy                   1.6.7
+decorator                 5.1.1
+defusedxml                0.7.1
+executing                 0.8.3
+fastjsonschema            2.16.2
+h11                       0.14.0
+httpcore                  1.0.2
+httpx                     0.27.0
+idna                      3.7
+ipykernel                 6.28.0
+ipython                   8.27.0
+jedi                      0.19.1
+Jinja2                    3.1.4
+json5                     0.9.6
+jsonschema                4.19.2
+jsonschema-specifications 2023.7.1
+jupyter_client            8.6.0
+jupyter_core              5.7.2
+jupyter-events            0.10.0
+jupyter-lsp               2.2.0
+jupyter_server            2.14.1
+jupyter_server_terminals  0.4.4
+jupyterlab                4.2.5
+jupyterlab-pygments       0.1.2
+jupyterlab_server         2.27.3
+MarkupSafe                2.1.3
+matplotlib-inline         0.1.6
+mistune                   2.0.4
+nbclient                  0.8.0
+nbconvert                 7.10.0
+nbformat                  5.9.2
+nest-asyncio              1.6.0
+notebook_shim             0.2.3
+overrides                 7.4.0
+packaging                 24.1
+pandocfilters             1.5.0
+parso                     0.8.3
+pip                       24.2
+platformdirs              3.10.0
+prometheus-client         0.14.1
+prompt-toolkit            3.0.43
+psutil                    5.9.0
+pure-eval                 0.2.2
+pycparser                 2.21
+pygame                    2.6.1
+Pygments                  2.15.1
+PySocks                   1.7.1
+python-dateutil           2.9.0.post0
+python-json-logger        2.0.7
+pytz                      2024.1
+pywin32                   305.1
+pywinpty                  2.0.10
+PyYAML                    6.0.1
+pyzmq                     25.1.2
+referencing               0.30.2
+requests                  2.32.3
+rfc3339-validator         0.1.4
+rfc3986-validator         0.1.1
+rpds-py                   0.10.6
+Send2Trash                1.8.2
+setuptools                72.1.0
+six                       1.16.0
+sniffio                   1.3.0
+soupsieve                 2.5
+stack-data                0.2.0
+terminado                 0.17.1
+tinycss2                  1.2.1
+tornado                   6.4.1
+traitlets                 5.14.3
+typing_extensions         4.11.0
+urllib3                   2.2.2
+wcwidth                   0.2.5
+webencodings              0.5.1
+websocket-client          1.8.0
+wheel                     0.44.0
+win-inet-pton             1.1.0
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<ul>
+<li>знайти і встановити пакет <code>pygame</code></li>
+</ul>
+<div id="cell-17" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pip install pygame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Collecting pygame
+  Using cached pygame-2.6.1-cp312-cp312-win_amd64.whl.metadata (13 kB)
+Using cached pygame-2.6.1-cp312-cp312-win_amd64.whl (10.6 MB)
+Installing collected packages: pygame
+Successfully installed pygame-2.6.1
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<ul>
+<li>вивести інформацію про <code>pygame</code></li>
+</ul>
+<div id="cell-19" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pip show pygame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Name: pygame
+Version: 2.6.1
+Summary: Python Game Development
+Home-page: https://www.pygame.org
+Author: A community project.
+Author-email: pygame@pygame.org
+License: LGPL
+Location: c:\Users\Vitaliy\.conda\envs\pythonLabs\Lib\site-packages
+Requires: 
+Required-by: 
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<ul>
+<li>запустити код, наведений нижче</li>
+</ul>
+<div id="cell-21" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygame</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>run <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">400</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>pygame.init()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>screen <span class="op">=</span> pygame.display.set_mode((width, height))</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>font <span class="op">=</span> pygame.font.SysFont(<span class="va">None</span>, <span class="dv">48</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> font.render(<span class="st">"Welcome to pygame"</span>, <span class="va">True</span>, (<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>))</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>screen.blit(text, ((width <span class="op">-</span> text.get_width()) <span class="op">//</span> <span class="dv">2</span>, (height <span class="op">-</span> text.get_height()) <span class="op">//</span> <span class="dv">2</span>))</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>pygame.display.flip()</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> run:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> event <span class="kw">in</span> pygame.event.get():</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.QUIT<span class="op">\</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONUP<span class="op">\</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.KEYUP:</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>            run <span class="op">=</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lab_8_Horbenko_files/figure-html/cell-22-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<ul>
+<li>деінсталювати пакет <code>pygame</code></li>
+</ul>
+<div id="cell-24" class="cell" data-execution_count="51">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pip uninstall pygame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>^C
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -264,9 +498,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><p>Ви хочете заборонити користувачеві модуля запускати ваш код як звичайний скрипт. Як досягти такого ефекту? Написати код.</p></li>
 <li><p>Деякі додаткові та необхідні пакети зберігаються в каталозі D:. Напишіть код, який забезпечує перегляд каталогу Python для пошуку всіх модулів. Написати код.</p></li>
-<li><p>Каталог, згаданий у попередній вправі, містить піддерево наступної структури: <img src="lab_8_Horbenko_files/figure-html/cell-16-1-86e1a674-a8b2-42f0-b244-17afaea5fbbf.png" class="img-fluid" alt="image.png"></p></li>
+<li><p>Каталог, згаданий у попередній вправі, містить піддерево наступної структури: <img src="lab_8_Horbenko_files/figure-html/cell-25-1-86e1a674-a8b2-42f0-b244-17afaea5fbbf.png" class="img-fluid" alt="image.png"></p></li>
 </ol>
 <p>Припускаючи, що <code>D:\Python\Project\Modules</code> був успішно доданий до списку <code>sys.path</code>, напишіть директиву імпорту, що дозволяє використовувати всі сутності з <code>mymodule</code>.</p>
+<div id="cell-26" class="cell" data-execution_count="48">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Цей код не скрипт"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Цей код не скрипт</code></pre>
+</div>
+</div>
+<div id="cell-27" class="cell" data-execution_count="49">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sys <span class="im">import</span> path</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>path.append(<span class="st">'D:</span><span class="ch">\\</span><span class="st">Python</span><span class="ch">\\</span><span class="st">Project</span><span class="ch">\\</span><span class="st">Modules'</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> root, dirs, files <span class="kw">in</span> os.walk(<span class="st">'D:</span><span class="ch">\\</span><span class="st">Python</span><span class="ch">\\</span><span class="st">Project</span><span class="ch">\\</span><span class="st">Modules'</span>):</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> files:</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">file</span>.endswith(<span class="st">'.py'</span>):</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Знайдено модуль: </span><span class="sc">{</span>os<span class="sc">.</span>path<span class="sc">.</span>join(root, <span class="bu">file</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="cell-28" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> abc.<span class="kw">def</span>.mymodule <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 
 </main>

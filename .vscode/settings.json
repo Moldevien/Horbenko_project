@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./lab_8_Horbenko/Нова папка",
+        "./lab_8_Horbenko/code",
+        "./lab_8_Horbenko/modules",
+        "./lab_8_Horbenko/packages"
+    ]
+}
